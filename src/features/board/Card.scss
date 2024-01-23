@@ -16,6 +16,11 @@
 
     &.show {
       transform: rotateY(0deg);
+
+      &.hint {
+        opacity: 0.5;
+        border: 1px solid red;
+      }
     }
   }
 }

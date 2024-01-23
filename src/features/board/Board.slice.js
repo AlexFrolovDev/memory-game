@@ -110,6 +110,7 @@ const boardSlice = createSlice({
         //console.log("starting game");
         //state.cards = getShuffledCards(state.boardSize);
         state.initialCardsDisplay = true;
+        state.score = 0;
         state.gameIsOver = false;
         state.gameStarted = false;
         state.cards = getShuffledCards(state.boardSize);

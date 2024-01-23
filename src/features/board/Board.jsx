@@ -2,6 +2,7 @@ import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   clickOnCard,
+  getIsGameOver,
   initialCardsDisplay,
   isBoardEnabled,
   selectCards,
@@ -39,6 +40,7 @@ const Board = () => {
   const currentShowingCardIdx = useSelector(showingCardIdx);
   const boardEnabled = useSelector(isBoardEnabled);
   const isShowingInitialCards = useSelector(initialCardsDisplay);
+  const gameOver = useSelector(getIsGameOver);
 
   useEffect(() => {
     //console.log(cards);
@@ -91,6 +93,7 @@ const Board = () => {
                   key={`${rowIdx}-${colIdx}`}
                   index={cols * rowIdx + colIdx}
                   onClick={onCellClcik}
+                  showHint={gameOver && card.show === false}
                 />
               </div>
             );

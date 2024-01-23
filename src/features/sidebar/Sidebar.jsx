@@ -68,7 +68,9 @@ const Sidebar = () => {
           <h3>Score</h3>
           <div className="score-wrapper">
             <span className="value-display">
-              {score.toString().padStart(6, "0")}
+              {`${score < 0 ? '-' : ""}${Math.abs(score)
+                .toString()
+                .padStart(6, "0")}`}
             </span>
           </div>
         </div>
