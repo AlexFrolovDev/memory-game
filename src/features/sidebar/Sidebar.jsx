@@ -8,15 +8,15 @@ const Sidebar = () => {
         <div className="block timer">
           <h3>Time</h3>
           <div className="timer-wrapper">
-            <span>00</span>
+            <span className='value-display'>00</span>
             <span>:</span>
-            <span>00</span>
+            <span className='value-display'>00</span>
           </div>
         </div>
         <div className="block score">
             <h3>Score</h3>
             <div className="score-wrapper">
-                <span>000000</span>
+                <span className='value-display'>000000</span>
             </div>
         </div>
         <div className="block actions">

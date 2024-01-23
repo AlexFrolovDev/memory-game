@@ -8,5 +8,65 @@
 
   .sidebar-content {
     padding: 1em;
+
+    .block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      padding-bottom: 1em;
+      gap: 1em;
+
+      h3 {
+        margin-bottom: 0;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: larger;
+
+        &.value-display {
+          padding: 3px 5px;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          border-radius: 3px;
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      &.timer {
+        .timer-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 3px;
+        }
+      }
+
+      &.actions {
+        .start-game-wrapper {
+          display: flex;
+          justify-content: center;
+
+          button {
+            font-size: larger;
+            font-weight: bold;
+            border-radius: 1em;
+            border-width: 1px;
+            background-color: rgba(0, 0, 150, 0.2);
+            padding: 5px 11px;
+            cursor: pointer;
+            box-shadow: none;
+            text-shadow: none;
+            transition: transform 0.1s linear;
+
+            &:hover {
+              text-shadow: black 0px 0px 1px;
+              transform: scale3d(1.05, 1.05, 1.05);
+            }
+          }
+        }
+      }
+    }
   }
 }
