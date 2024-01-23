@@ -15,21 +15,30 @@ const INITIAL_STATE = {
 const getShuffledCards = (size) => {
   const imageNames = new Array(50)
     .fill(null)
-    .map((_, idx) => `image-${idx}.jpg`);
+    .map((_, idx) => `image-${idx + 1}.jpg`);
+
   const mixArray = (array) => {
-    array.forEach((imageName, index) => {
-      const rndIdx = Math.floor(Math.random() * 50);
-      const rndIdx2 = Math.floor(Math.random() * (50 - rndIdx));
-      [imageNames[rndIdx], imageNames[rndIdx2]] = [
-        imageNames[rndIdx2],
-        imageNames[rndIdx],
-      ];
+    array.forEach((_, idx) => {
+      /* const rndIdx = Math.floor(Math.random() * array.length);
+      const rndIdx2 = Math.floor(Math.random() * (array.length));
+      [array[rndIdx], array[rndIdx2]] = [array[rndIdx2], array[rndIdx]]; */
+      let cycle = 0;
+      while (cycle < array.length) {
+        const rndIdx = Math.floor(Math.random() * array.length);
+        const rndIdx2 = Math.floor(Math.random() * array.length);
+        [array[rndIdx], array[rndIdx2]] = [array[rndIdx2], array[rndIdx]];
+
+        cycle++;
+      }
     });
   };
+
   mixArray(imageNames);
+
   const arraySlice = imageNames
     .slice(0, size / 2)
     .concat(imageNames.slice(0, size / 2));
+
   mixArray(arraySlice);
 
   return arraySlice.map((image) => ({ image, show: false }));
