@@ -1,15 +1,10 @@
 import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  actions,
-  cards,
   clickOnCard,
-  currentSelectedCardIdx,
   initialCardsDisplay,
   isBoardEnabled,
   selectCards,
-  selectSelf,
-  selectors,
   showingCardIdx,
   startGame,
 } from "./Board.slice";
