@@ -65,6 +65,13 @@
               transform: scale3d(1.05, 1.05, 1.05);
             }
           }
+
+          &.stop {
+            button {
+              background-color: rgb(250, 0, 0, 0.7);
+              color: white;
+            }
+          }
         }
       }
     }

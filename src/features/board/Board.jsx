@@ -42,7 +42,7 @@ const Board = () => {
 
   useEffect(() => {
     //console.log(cards);
-    dispatch(startGame());
+    //dispatch(startGame());
   }, []);
 
   useEffect(() => {
