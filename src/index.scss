@@ -15,5 +15,9 @@ body,
   justify-content: center;
   align-items: center;
 
- 
+  .content {
+    height: fit-content;
+    display: flex;
+    gap: 1em;
+  }
 }

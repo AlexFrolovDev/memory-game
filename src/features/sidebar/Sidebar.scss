@@ -1,0 +1,12 @@
+.sidebar-wrapper {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  .sidebar-content {
+    padding: 1em;
+  }
+}
